@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>/course-overview/instructor/</loc>
+    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/course-overview/schedule/</loc>
+  </url>
+  
+  <url>
+    <loc>/course-overview/meetups/</loc>
+  </url>
+  
+  <url>
+    <loc>/course-overview/</loc>
+    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/chapters/1/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignments/</loc>
+  </url>
+  
+  <url>
+    <loc>/chapters/2/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignments/homework/</loc>
+  </url>
+  
+  <url>
+    <loc>/chapters/3/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignments/labs/</loc>
+  </url>
+  
+  <url>
+    <loc>/course-overview/textbooks/</loc>
+  </url>
+  
+  <url>
+    <loc>/chapters/4/</loc>
+  </url>
+  
+  <url>
+    <loc>/chapters/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignments/project/</loc>
+  </url>
+  
+  <url>
+    <loc>/course-overview/software/</loc>
+  </url>
+  
+  <url>
+    <loc>/chapters/5/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignments/exams/</loc>
+  </url>
+  
+  <url>
+    <loc>/course-overview/materials/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>
