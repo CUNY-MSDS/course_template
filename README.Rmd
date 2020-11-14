@@ -81,4 +81,4 @@ Additionally, you can configure a custom URL if you wish on the Github settings 
 
 ## Learning Management System (LMS)
 
-
+Coming soon...

@@ -109,3 +109,5 @@ settings page. Once the website is built, push the `docs` folder to your
 Github repository.
 
 ## Learning Management System (LMS)
+
+Coming soon…
