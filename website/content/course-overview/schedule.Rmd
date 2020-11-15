@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Schedule 2"
 description: "Schedule"
 weight: 2
 editor_options: 
@@ -7,20 +7,16 @@ editor_options:
 ---
 
 
+
 ```{r schedule-setup, echo=FALSE, warning=FALSE, message=FALSE}
-# devtools::install_github("gadenbuie/ggweekly")
-library(ggweekly)
-library(rlang) # Needed for the ggweekly.R script to work
-library(configr)
-# source('../../R/ggweekly.R') # Fixes issue with loading PT Sans fonts with PDF output
+# Using the FullCalendar JavaScript library: https://fullcalendar.io
+
 source('../../../R/createICS.R')
-library(ggplot2)
 library(readxl)
 library(lubridate)
+library(configr)
 
 options(knitr.kable.NA = '')
-
-#semester <- 'Spring 2021'
 
 palette <- c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462',
 			 '#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f')
@@ -66,10 +62,9 @@ for(i in 1:nrow(topics)) {
 	}
 }
 
-start_day <- lubridate::floor_date(min(meetups$day), "month")
-end_day <- lubridate::ceiling_date(max(meetups$day), "month") - 1
+start_day <- lubridate::floor_date(min(c(meetups$day, topics$Start)), "month")
+end_day <- lubridate::ceiling_date(max(c(meetups$day, topics$End)), "month") - 1
 ```
-
 
 *Note: Schedule is subject to change. Last updated `r lastModified`.*
 
@@ -93,33 +88,50 @@ createICS(meetups) %>% write(file = ics.file)
 [CUNY SPS Academic Calendar](https://sps.cuny.edu/academics/academic-calendar)
 
 
-```{r printTopics, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialDate: '`r start_day`',
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      height: 'auto',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      selectable: true,
+      selectMirror: true,
+      nowIndicator: true,
+      events: [
+ ```{r, echo=FALSE, results = 'asis', warning=FALSE, message=FALSE, error=FALSE}
+cat(paste0(c(
+	paste0('{ title: "', topics$Topic, '",\n', 
+		   "  start: '", as.Date(topics$Start), "',\n",
+		   "  end: '", (as.Date(topics$End)+1), "' }"),
+		paste0("{ title: '", meetups$Topic, "',\n", 
+		   "  start: '", format(meetups$starttime, '%Y-%m-%dT%H:%M:%S'), "',\n",
+		   "  end: '", format(meetups$endtime, '%Y-%m-%dT%H:%M:%S'), "' }")
+	), collapse = ',\n '))
+```
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+
+<div id='calendar'></div>
+
+
+```{r printTopics, eval = FALSE, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+# This will create a table of the schedule. Set eval=TRUE to include.
 topics$Start <- format(topics$Start, format = '%A, %B %d, %Y')
 topics$End <- format(topics$End, format = '%A, %B %d, %Y')
 knitr::kable(topics)
-```
-
-
-```{r schedule-figure, echo=FALSE, warning=FALSE, message=FALSE}
-schedule$label <- gsub('<br/>', '\n', schedule$label)
-
-months <- seq(start_day, end_day, by = "1 month")
-for(i in seq_along(months)) {
-	gcal <- ggweek_planner(
-		start_day = months[i],
-		end_day = months[i] + days_in_month(month(months[i])) - 1,	
-		show_month_boundaries = FALSE, 
-		show_month_start_day = FALSE,
-		week_start = "epiweek",
-		week_start_label = "week",
-		font_label_family = 'Helvetica',
-		holidays = NULL,
-		highlight_days = schedule
-		) +
-		ggplot2::theme(plot.margin = ggplot2::margin(0.5, 0.5, 0.5, 0.5, "in")) +
-		ggplot2::ggtitle(paste0(month(months[i], label = TRUE, abbr = FALSE), ' ',
-								year(months[i])))
-	print(gcal)
-}
-
 ```

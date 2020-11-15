@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Schedule 2"
 description: "Schedule"
 weight: 2
 editor_options: 
@@ -8,108 +8,138 @@ editor_options:
 
 
 
-<p><em>Note: Schedule is subject to change. Last updated November 14, 2020 11:57AM.</em></p>
+<p><em>Note: Schedule is subject to change. Last updated November 14, 2020 07:59PM.</em></p>
 <p><a href="/Course_Calendar.ics">Click here to import the course calendar into your calendar application</a></p>
 <p><a href="https://sps.cuny.edu/academics/academic-calendar">CUNY SPS Academic Calendar</a></p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Start</th>
-<th align="left">End</th>
-<th align="left">Topic</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Friday, January 29, 2021</td>
-<td align="left">Sunday, February 07, 2021</td>
-<td align="left"><a href="/chapters/chapter1">Chapter 1</a></td>
-</tr>
-<tr class="even">
-<td align="left">Saturday, February 08, 2020</td>
-<td align="left">Sunday, February 14, 2021</td>
-<td align="left"><a href="/chapters/chapter2">Chapter 2</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, February 15, 2021</td>
-<td align="left">Monday, February 15, 2021</td>
-<td align="left">President’s Day</td>
-</tr>
-<tr class="even">
-<td align="left">Monday, February 15, 2021</td>
-<td align="left">Sunday, February 21, 2021</td>
-<td align="left"><a href="/chapters/chapter3">Chapter 3</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, February 22, 2021</td>
-<td align="left">Sunday, February 28, 2021</td>
-<td align="left"><a href="/chapters/chapter4">Chapter 4</a></td>
-</tr>
-<tr class="even">
-<td align="left">Monday, March 01, 2021</td>
-<td align="left">Sunday, March 07, 2021</td>
-<td align="left"><a href="/chapters/chapter5">Chapter 5</a></td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, March 08, 2021</td>
-<td align="left">Sunday, March 14, 2021</td>
-<td align="left">Week 6</td>
-</tr>
-<tr class="even">
-<td align="left">Monday, March 15, 2021</td>
-<td align="left">Sunday, March 21, 2021</td>
-<td align="left">Week 7</td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, March 22, 2021</td>
-<td align="left">Saturday, March 28, 2026</td>
-<td align="left">Week 8</td>
-</tr>
-<tr class="even">
-<td align="left">Saturday, March 27, 2021</td>
-<td align="left">Sunday, April 04, 2021</td>
-<td align="left">Spring Recess</td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, April 05, 2021</td>
-<td align="left">Sunday, April 11, 2021</td>
-<td align="left">Week 9</td>
-</tr>
-<tr class="even">
-<td align="left">Monday, April 12, 2021</td>
-<td align="left">Sunday, April 18, 2021</td>
-<td align="left">Week 10</td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, April 19, 2021</td>
-<td align="left">Sunday, April 25, 2021</td>
-<td align="left">Week 11</td>
-</tr>
-<tr class="even">
-<td align="left">Monday, April 26, 2021</td>
-<td align="left">Sunday, May 02, 2021</td>
-<td align="left">Week 12</td>
-</tr>
-<tr class="odd">
-<td align="left">Monday, May 03, 2021</td>
-<td align="left">Sunday, May 09, 2021</td>
-<td align="left">Week 13</td>
-</tr>
-<tr class="even">
-<td align="left">Monday, May 10, 2021</td>
-<td align="left">Monday, May 17, 2021</td>
-<td align="left">Week 14</td>
-</tr>
-<tr class="odd">
-<td align="left">Tuesday, May 18, 2021</td>
-<td align="left">Tuesday, May 18, 2021</td>
-<td align="left">Reading Day</td>
-</tr>
-<tr class="even">
-<td align="left">Wednesday, May 19, 2021</td>
-<td align="left">Tuesday, May 25, 2021</td>
-<td align="left"><a href="/assignments/exams/">Final Exam</a></td>
-</tr>
-</tbody>
-</table>
-<p><img src="/course-overview/schedule_files/figure-html/schedule-figure-1.png" width="672" /><img src="/course-overview/schedule_files/figure-html/schedule-figure-2.png" width="672" /><img src="/course-overview/schedule_files/figure-html/schedule-figure-3.png" width="672" /><img src="/course-overview/schedule_files/figure-html/schedule-figure-4.png" width="672" /></p>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialDate: '2021-01-01',
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      height: 'auto',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      selectable: true,
+      selectMirror: true,
+      nowIndicator: true,
+      events: [
+ { title: "Chapter 1",
+   start: '2021-01-29',
+   end: '2021-02-08' },
+  { title: "Chapter 2",
+   start: '2021-02-08',
+   end: '2021-02-15' },
+  { title: "President's Day",
+   start: '2021-02-15',
+   end: '2021-02-16' },
+  { title: "Chapter 3",
+   start: '2021-02-15',
+   end: '2021-02-22' },
+  { title: "Chapter 4",
+   start: '2021-02-22',
+   end: '2021-03-01' },
+  { title: "Chapter 5",
+   start: '2021-03-01',
+   end: '2021-03-08' },
+  { title: "Week 6",
+   start: '2021-03-08',
+   end: '2021-03-15' },
+  { title: "Week 7",
+   start: '2021-03-15',
+   end: '2021-03-22' },
+  { title: "Week 8",
+   start: '2021-03-22',
+   end: '2021-03-29' },
+  { title: "Spring Recess",
+   start: '2021-03-27',
+   end: '2021-04-05' },
+  { title: "Week 9",
+   start: '2021-04-05',
+   end: '2021-04-12' },
+  { title: "Week 10",
+   start: '2021-04-12',
+   end: '2021-04-19' },
+  { title: "Week 11",
+   start: '2021-04-19',
+   end: '2021-04-26' },
+  { title: "Week 12",
+   start: '2021-04-26',
+   end: '2021-05-03' },
+  { title: "Week 13",
+   start: '2021-05-03',
+   end: '2021-05-10' },
+  { title: "Week 14",
+   start: '2021-05-10',
+   end: '2021-05-18' },
+  { title: "Reading Day",
+   start: '2021-05-18',
+   end: '2021-05-19' },
+  { title: "Final Exam",
+   start: '2021-05-19',
+   end: '2021-05-26' },
+  { title: 'Week 1 Meetup',
+   start: '2021-02-03T20:30:00',
+   end: '2021-02-03T21:30:00' },
+  { title: 'Week 2 Meetup',
+   start: '2021-02-10T20:30:00',
+   end: '2021-02-10T21:30:00' },
+  { title: 'Week 3 Meetup',
+   start: '2021-02-17T20:30:00',
+   end: '2021-02-17T21:30:00' },
+  { title: 'Week 4 Meetup',
+   start: '2021-02-24T20:30:00',
+   end: '2021-02-24T21:30:00' },
+  { title: 'Week 5 Meetup',
+   start: '2021-03-03T20:30:00',
+   end: '2021-03-03T21:30:00' },
+  { title: 'Week 6 Meetup',
+   start: '2021-03-10T20:30:00',
+   end: '2021-03-10T21:30:00' },
+  { title: 'Week 7 Meetup',
+   start: '2021-03-17T20:30:00',
+   end: '2021-03-17T21:30:00' },
+  { title: 'Week 8 Meetup',
+   start: '2021-03-24T20:30:00',
+   end: '2021-03-24T21:30:00' },
+  { title: 'NO CLASS - Spring Recess',
+   start: 'NA',
+   end: 'NA' },
+  { title: 'Week 9 Meetup',
+   start: '2021-04-07T20:30:00',
+   end: '2021-04-07T21:30:00' },
+  { title: 'Week 10 Meetup',
+   start: '2021-04-14T20:00:00',
+   end: '2021-04-14T21:00:00' },
+  { title: 'Week 11 Meetup',
+   start: '2021-04-21T20:30:00',
+   end: '2021-04-21T21:30:00' },
+  { title: 'Week 12 Meetup',
+   start: '2021-04-28T20:30:00',
+   end: '2021-04-28T21:30:00' },
+  { title: 'Week 13 Meetup',
+   start: '2021-05-05T20:30:00',
+   end: '2021-05-05T21:30:00' },
+  { title: 'Week 14 Meetup',
+   start: '2021-05-12T20:30:00',
+   end: '2021-05-12T21:30:00' },
+  { title: 'Week 15 Meetup',
+   start: '2021-05-19T20:30:00',
+   end: '2021-05-19T21:30:00' }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+<div id="calendar">
+
+</div>

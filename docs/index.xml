@@ -19,15 +19,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     </item>
     
     <item>
-      <title>Schedule</title>
+      <title>Schedule 2</title>
       <link>/course-overview/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/course-overview/schedule/</guid>
-      <description> Note: Schedule is subject to change. Last updated November 14, 2020 11:57AM.
+      <description>Note: Schedule is subject to change. Last updated November 14, 2020 07:59PM.
 Click here to import the course calendar into your calendar application
 CUNY SPS Academic Calendar
-  Start End Topic    Friday, January 29, 2021 Sunday, February 07, 2021 Chapter 1  Saturday, February 08, 2020 Sunday, February 14, 2021 Chapter 2  Monday, February 15, 2021 Monday, February 15, 2021 President’s Day  Monday, February 15, 2021 Sunday, February 21, 2021 Chapter 3  Monday, February 22, 2021 Sunday, February 28, 2021 Chapter 4  Monday, March 01, 2021 Sunday, March 07, 2021 Chapter 5  Monday, March 08, 2021 Sunday, March 14, 2021 Week 6  Monday, March 15, 2021 Sunday, March 21, 2021 Week 7  Monday, March 22, 2021 Saturday, March 28, 2026 Week 8  Saturday, March 27, 2021 Sunday, April 04, 2021 Spring Recess  Monday, April 05, 2021 Sunday, April 11, 2021 Week 9  Monday, April 12, 2021 Sunday, April 18, 2021 Week 10  Monday, April 19, 2021 Sunday, April 25, 2021 Week 11  Monday, April 26, 2021 Sunday, May 02, 2021 Week 12  Monday, May 03, 2021 Sunday, May 09, 2021 Week 13  Monday, May 10, 2021 Monday, May 17, 2021 Week 14  Tuesday, May 18, 2021 Tuesday, May 18, 2021 Reading Day  Wednesday, May 19, 2021 Tuesday, May 25, 2021 Final Exam    </description>
+ document.addEventListener(&#39;DOMContentLoaded&#39;, function() { var calendarEl = document.getElementById(&#39;calendar&#39;); var calendar = new FullCalendar.Calendar(calendarEl, { initialDate: &#39;2021-01-01&#39;, initialView: &#39;dayGridMonth&#39;, headerToolbar: { left: &#39;prev,next today&#39;, center: &#39;title&#39;, right: &#39;dayGridMonth,timeGridWeek,timeGridDay,listWeek&#39; }, height: &#39;auto&#39;, navLinks: true, // can click day/week names to navigate views editable: true, selectable: true, selectMirror: true, nowIndicator: true, events: [ { title: &#34;</description>
     </item>
     
     <item>

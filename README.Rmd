@@ -32,7 +32,7 @@ blogdown::new_site(dir = 'website',
 
 
 ```{r, eval = FALSE}
-# setwd('website')
+setwd('website')
 blogdown::serve_site('website')
 ```
 
@@ -82,3 +82,11 @@ Additionally, you can configure a custom URL if you wish on the Github settings 
 ## Learning Management System (LMS)
 
 Coming soon...
+
+
+## TODO
+
+* Create icon for each site
+* Update og-image.png
+
+
