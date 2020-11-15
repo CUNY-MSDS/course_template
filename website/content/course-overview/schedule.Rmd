@@ -1,11 +1,11 @@
 ---
-title: "Schedule 2"
+title: "Schedule"
 description: "Schedule"
+menu: "main"
 weight: 2
 editor_options: 
   chunk_output_type: console
 ---
-
 
 
 ```{r schedule-setup, echo=FALSE, warning=FALSE, message=FALSE}
@@ -87,6 +87,14 @@ createICS(meetups) %>% write(file = ics.file)
 
 [CUNY SPS Academic Calendar](https://sps.cuny.edu/academics/academic-calendar)
 
+```{r, echo=FALSE, results='hide'}
+initialDate <- Sys.Date()
+if(Sys.Date() < start_day) {
+	initialDate <- start_day
+} else if(Sys.Date() > end_day) {
+	initialDate <- end_day
+}
+```
 
 <script>
 
@@ -94,7 +102,7 @@ createICS(meetups) %>% write(file = ics.file)
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialDate: '`r start_day`',
+      initialDate: '`r initialDate`',
       initialView: 'dayGridMonth',
       headerToolbar: {
         left: 'prev,next today',
@@ -111,9 +119,11 @@ createICS(meetups) %>% write(file = ics.file)
  ```{r, echo=FALSE, results = 'asis', warning=FALSE, message=FALSE, error=FALSE}
 cat(paste0(c(
 	paste0('{ title: "', topics$Topic, '",\n', 
+	       ifelse(is.na(topics$Link), '', paste0('  url: "', topics$Link, '",\n')),
 		   "  start: '", as.Date(topics$Start), "',\n",
 		   "  end: '", (as.Date(topics$End)+1), "' }"),
 		paste0("{ title: '", meetups$Topic, "',\n", 
+	       ifelse(is.na(meetups$Link), '', paste0('  url: "', meetups$Link, '",\n')),
 		   "  start: '", format(meetups$starttime, '%Y-%m-%dT%H:%M:%S'), "',\n",
 		   "  end: '", format(meetups$endtime, '%Y-%m-%dT%H:%M:%S'), "' }")
 	), collapse = ',\n '))

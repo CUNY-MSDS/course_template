@@ -1,7 +1,6 @@
 ---
 title: "Meetups"
 description: "Meetups"
-menu: "main"
 weight: 3
 editor_options: 
   chunk_output_type: console
