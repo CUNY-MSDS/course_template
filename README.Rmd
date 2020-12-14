@@ -1,5 +1,5 @@
 ---
-title: "Template for MSDS Course"
+title: "Template for MSDS Courses"
 output: github_document
 editor_options: 
   chunk_output_type: console
@@ -8,6 +8,47 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+
+## Recommendations for a successful online course
+
+The design of successful online courses requires special considerations as compared to traditional classroom based instruction. Joosten and Cusatis (2019) studied the characteristics of successful online courses and identified eight indicators for successful course (see the National Research Center for [Distance Education and Technological Advancements](https://uwm.edu/deta/) figure below). To address these characteristics at CUNY SPS for the Master's in Data Science (MSDS) program, we have outlined the following specific components MSDS courses should have:
+
+* Clearly define learning objectives both for the overall course as well as each learning module.
+
+* Organize the course with all required assignments, with due dates, available at the beginning of the semester. This will allow students to schedule their time and know when large assignements are due.
+
+* An introductory video that introduces yourself, explains the course organization, and clearly articulates student expectations.
+
+* Use a *variety of assessments* throughout the semester that give students an opportunity to apply the knowledge and skills outlined in the learning objectives.
+
+	* *Formative assessment(s)* given at the beginning of the semester can help you and students understand where they are vis-à-vis prior knowledge. These should not be graded and any course points should be given on did or did not do basis.
+
+	* Most, if not all, courses should have a culminating project where students apply the skills and knowledge obtained in the course.
+	
+* Weekly meetings of approximately one hour.
+
+	* Although we cannot strictly require students to attend a synchronous meeting, we can expect (require) students to watch the meetings. Recordings should be made available as soon as possible.
+
+	* The meetings should have some direct instruction. For example, explaining key concepts or walking through an analysis are good use of this time.
+
+	* Weekly meetings are a good time to share your own experiences regarding the current topic. Providing examples beyond the course materials (e.g. textbook) exposes students to the issues of applying the theoretical concepts to "real world" problems.
+	
+* Value student engagement/participation. Admittedly the evaluation of student engagement and participation is difficult, especially in an asynchronous environment. One approach is the use of one minute papaers (Angelo & Cross, 1993; see also [Bali, 2015](https://topr.online.ucf.edu/use-minute-paper-to-evaluate-student-participation/) for an applied use). The one minute paper asks students to answer the two questions at the completion of a class: 1. What was the most important thing you learned during this class? and 2. What important question remains unanswered for you? The one minute paper not only provides an opportunity to check student understanding, but any misconceptions can be addressed (retaught) either in a follow-up written communication or during the next meeting.
+
+* Create a climate of open student-to-instructor and student-to-student communication. There are a number of technological options available including  Blackboard discussion boards and/or Slack (the free version is typically sufficient for MSDS courses).
+
+
+![DETA DETA Online Course Quallity Indicators](images/DETA_Online_Course_Quallity_Indicators.jpg)
+
+**References**
+
+Angelo, T.A. & Cross, K.P. (1993). *Classroom Assessment Techniques, 2nd ed.* San Francisco: Jossey-Bass.
+
+Joosten, T., Cusatis, R., & Harness, L. (2019). [A cross-institutional study of instructional characteristics and student outcomes: Are quality indicators of online courses able to predict student success?](https://olj.onlinelearningconsortium.org/index.php/olj/article/view/1432) *Online Learning Journal, 23*(4).
+
+Hermans, F. (2019). [Explicit Direct Instruction in Programming Education](https://rstudio.com/resources/rstudioconf-2019/explicit-direct-instruction-in-programming-education/). Talk given at 2019 RStudio::conf.
 
 ## Course Website
 
