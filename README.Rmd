@@ -73,8 +73,7 @@ blogdown::new_site(dir = 'website',
 
 
 ```{r, eval = FALSE}
-setwd('website')
-blogdown::serve_site('website')
+wd <- setwd('website'); blogdown::serve_site('website'); setwd(wd)
 ```
 
 ```{r, eval = FALSE}

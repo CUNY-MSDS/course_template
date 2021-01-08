@@ -1,7 +1,10 @@
 ---
-title: "Welcome to the course"
-date: 2021-01-29
-weight: 1
+title: "Welcome to the course!"
+author: "NAME"
+date: 2021-01-01
+draft: false
+categories: ["Announcement"]
+tags: ["Introduction"]
 ---
 
 Welcome to the course.

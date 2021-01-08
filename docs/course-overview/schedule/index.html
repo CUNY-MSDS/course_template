@@ -3,7 +3,7 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Schedule 2 - DATA XXX - SEMESTER YEAR</title>
+<title>Schedule - DATA XXX - SEMESTER YEAR</title>
 <meta name="description" content="Schedule">
 <meta name="generator" content="Hugo 0.78.1" />
 <link href="//index.xml" rel="alternate" type="application/rss+xml">
@@ -17,7 +17,7 @@
 <script src="/js/bundle.js"></script><style>
 :root {--custom-background-color: #003366;}
 </style>
-<meta property="og:title" content="Schedule 2" />
+<meta property="og:title" content="Schedule" />
 <meta property="og:description" content="Schedule" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/course-overview/schedule/" />
@@ -26,12 +26,12 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/og-image.png"/>
 
-<meta name="twitter:title" content="Schedule 2"/>
+<meta name="twitter:title" content="Schedule"/>
 <meta name="twitter:description" content="Schedule"/>
-<meta itemprop="name" content="Schedule 2">
+<meta itemprop="name" content="Schedule">
 <meta itemprop="description" content="Schedule">
 
-<meta itemprop="wordCount" content="404">
+<meta itemprop="wordCount" content="412">
 <meta itemprop="image" content="/images/og-image.png"/>
 
 
@@ -39,6 +39,11 @@
 <meta itemprop="keywords" content="" />
 <link href='/fullcalendar-lib/main.css' rel='stylesheet' />
 <script src='/fullcalendar-lib/main.js'></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
 <style>
 #calendar {
@@ -48,13 +53,15 @@
 </style>
 </head>
 <body><div class="container"><header>
-<h1>DATA XXX - SEMESTER YEAR</h1>
+
+<a href="/"><img src='/images/course_logo.png' align="left" style="height:40px; padding-right:10px;border:0;" /></a><h1>DATA XXX - SEMESTER YEAR</h1>
 </header>
 <div class="global-menu">
 <nav>
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/blog">Announcements</a></li>
+<li><a href="/course-overview/schedule/">Schedule</a></li>
 <li><a href="/course-overview/meetups/">Meetups</a></li>
 <li><a href="">Slack</a></li>
 <li><a href="https://bbhosted.cuny.edu/webapps/login">Blackboard</a></li>
@@ -62,12 +69,12 @@
 </nav>
 </div>
 <div class="content-container">
-<main><h1>Schedule 2</h1>
+<main><h1>Schedule</h1>
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p><em>Note: Schedule is subject to change. Last updated November 14, 2020 07:59PM.</em></p>
-<p><a href="/Course_Calendar.ics">Click here to import the course calendar into your calendar application</a></p>
 <p><a href="https://sps.cuny.edu/academics/academic-calendar">CUNY SPS Academic Calendar</a></p>
 <script>
 
@@ -75,7 +82,7 @@
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialDate: '2021-01-01',
+      initialDate: '2021-01-08',
       initialView: 'dayGridMonth',
       headerToolbar: {
         left: 'prev,next today',
@@ -90,15 +97,18 @@
       nowIndicator: true,
       events: [
  { title: "Chapter 1",
+   url: "/chapters/chapter1",
    start: '2021-01-29',
    end: '2021-02-08' },
   { title: "Chapter 2",
+   url: "/chapters/chapter2",
    start: '2021-02-08',
    end: '2021-02-15' },
   { title: "President's Day",
    start: '2021-02-15',
    end: '2021-02-16' },
   { title: "Chapter 3",
+   url: "/chapters/chapter3",
    start: '2021-02-15',
    end: '2021-02-22' },
   { title: "Chapter 4",
@@ -141,6 +151,7 @@
    start: '2021-05-18',
    end: '2021-05-19' },
   { title: "Final Exam",
+   url: "/assignments/exams/",
    start: '2021-05-19',
    end: '2021-05-26' },
   { title: 'Week 1 Meetup',
@@ -201,6 +212,7 @@
 <div id="calendar">
 
 </div>
+<p><a href="/Course_Calendar.ics">Click here to import the course calendar into your calendar application</a></p>
 <div class="edit-meta">
 
 <br><a href="https://github.com/CUNY-MSDS/course_template/website/edit/master/content/course-overview/schedule.html" class="edit-page"><i class="fas fa-pen-square"></i> Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="/course-overview/instructor/" title="Instructor"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Instructor</a>
@@ -220,7 +232,7 @@
   
 <ul class="sub-menu">
 <li class=""><a href="/course-overview/instructor/">Instructor</a></li>
-<li class="active"><a href="/course-overview/schedule/">Schedule 2</a></li>
+<li class="active"><a href="/course-overview/schedule/">Schedule</a></li>
 <li class=""><a href="/course-overview/meetups/">Meetups</a></li>
 <li class=""><a href="/course-overview/textbooks/">Textbooks</a></li>
 <li class=""><a href="/course-overview/software/">Software</a></li>
