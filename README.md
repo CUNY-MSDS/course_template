@@ -73,6 +73,19 @@ should have:
 
 ![DETA DETA Online Course Quallity
 Indicators](images/DETA_Online_Course_Quallity_Indicators.jpg)
+
+**Resources**
+
+These are some resources that may be helpful for course design and
+teaching:
+
+-   [The SUNY Online Course Quality Review Rubric
+    OSCQR](https://oscqr.suny.edu)
+-   [Github Teachers Toolbox](https://education.github.com/toolbox)
+-   [Happy Git and GitHub for the useR](https://happygitwithr.com)
+-   [Delivering High-Quality Instruction Online in Response to
+    COVID-19](Resources/Faculty-Playbook_Final-1.pdf)
+
 **References**
 
 Angelo, T.A. & Cross, K.P. (1993). *Classroom Assessment Techniques, 2nd
@@ -117,8 +130,7 @@ blogdown::new_site(dir = 'website',
 ```
 
 ``` r
-setwd('website')
-blogdown::serve_site('website')
+wd <- setwd('website'); blogdown::serve_site('website'); setwd(wd)
 ```
 
 ``` r
